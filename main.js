@@ -17,7 +17,7 @@ X.addEventListener('click', function() {
     });
 
 GitHub.addEventListener('click', function() {
-    window.open('https://github.com/cha-li-jin');
+    window.open('https://github.com/tsaritsynowo');
     });
 
 BiliBili.addEventListener('click', function() {
@@ -50,15 +50,11 @@ function draw() {
 
 const introduction = document.querySelector("#my-introduction");
 
-async function showIntroduction() {
-    fetch("https://github.com/Cha-Li-Jin/trs-api/blob/main/intro.json")
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        console.log(response);
-    })
-
+async function getintro() {
+    let Response = await fetch("https://tsaritsynowo.github.io/intro.json")
+    let introlist = await Response.json();
+    let ran = Math.floor(Math.random() * introlist.length);
+    introduction.innerHTML = introlist[ran];
 };
 
-showIntroduction();
+getintro();
