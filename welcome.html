@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/welcome.css">
+    <title>welcome！关于察里津</title>
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: #a393c67d;
+            width: 100vw;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            clear: both;
+            overflow: hidden;
+            margin-top: 13px;
+            margin-bottom: 13px;
+            min-width: 630px;
+        }
+
+        nav .home {
+            float: left;
+            /* width: 20vw; */
+            padding-right: 4vw;
+            min-width: 130px;
+            max-width: 170px;
+            text-align: center;
+        }
+
+        .home img {
+            height: 20px;
+            filter: invert(100%);
+            float: left;
+        }
+
+        .home samp{
+            float: left;
+            font-size: 15px;
+            font-family: Microsoft YaHei;
+        }
+
+        nav .other {
+            float: left;
+            width: 16.5vw;
+            max-width: 150px;
+            text-align: center;
+        }
+
+        .other img{
+            height: 20px;
+            filter: invert(100%);
+            float: left;
+        }
+
+        .other samp{
+            float: left;
+            font-size: 15px;
+            font-family: Microsoft YaHei;
+        }
+
+        nav a,
+        nav a:hover,
+        nav a:visited,
+        nav a:link,
+        nav a:active {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .introduction {
+            border-radius: 50px;
+            background-color: rgba(248, 248, 248, 0.453);
+            transition: all 1s;
+            backdrop-filter: blur(10px);
+        }
+
+        .introduction:hover {
+            box-shadow: 10px 10px 30px rgb(171, 171, 171);
+
+        }
+
+        .introduction-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .profile-pic {
+            margin-top: 10px;
+        }
+
+        .profile-pic img {
+            border-radius: 70px;
+            width: 140px;
+        }
+
+        .detail-box {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .detail-box h1 {
+            text-align: center;
+            margin: 0px;
+        }
+
+        .detail-box samp {
+            text-align: center;
+            font-size: small;
+            color: grey;
+        }
+
+        .detail-box p {
+            font-size: medium;
+        }
+
+        .link-box1 {
+            /* width: 800px; */
+        }
+
+        .link-box1 ul {
+            list-style-type: none;
+            position: relative;
+            margin: 0px;
+        }
+
+        .link-box1 .li1 {
+            border: 1px solid grey;
+            border-radius: 25px;
+            margin: 7px;
+            float: left;
+            position: relative;
+            left: -20.5px;
+        }
+
+        .web-box1 {
+            /* width: 70px; */
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .web-box1 img {
+            width: 40px;
+            border-radius: 20px;
+        }
+
+        .link-box2 {
+            width: 600px;
+        }
+
+        .link-box2 ul {
+            list-style-type: none;
+            margin: 0px;
+            position: relative;
+        }
+
+        .link-box2 li {
+            border: 1px solid grey;
+            border-radius: 30px;
+            float: left;
+            position: relative;
+            left: -6px;
+            margin: 7.5px;
+        }
+
+        .web-box2 {
+            width: 87px;
+            height: 87px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .web-box2 img {
+            width: 30px;
+            border-radius: 12px;
+        }
+
+        .web-box2 h2 {
+            font-size: small;
+            font-weight: 400;
+            margin-bottom: 0px;
+            margin-top: 5px;
+            text-indent: 3px;
+        }
+
+        .web-box2 a,
+        .web-box2 a:link,
+        .web-box2 a:hover,
+        .web-box2 a:visited,
+        .web-box2 a:active {
+            font-size: small;
+            color: rgb(169, 169, 169);
+            margin-bottom: 5px;
+            text-indent: 3px;
+        }
+
+        .web-box2 button {
+            border: none;
+            font-weight: 700;
+            border-radius: 9px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <canvas id="canvas" width="" height="">
+            
+        </canvas>
+        <nav>
+            <ul>
+                <li class="home">
+                    <a href="./welcome.html">
+                        <img src="./img/首页.png" alt="">
+                        <samp>Tsaritsyn's blog  丨</samp>
+                    </a>
+                </li>
+    
+                <li class="other">
+                    <a href="./found/found.html">
+                        <img src="./img/发现.png" alt="">
+                        <samp>动态</samp>
+                    </a>
+                </li>
+    
+                <li class="other">
+                    <a href="./note/note.html">
+                        <img src="./img/编辑.png" alt="">
+                        <samp>笔记</samp>
+                    </a>
+                </li>
+    
+                <li class="other">
+                    <a href="./picture/picture.html">
+                        <img src="./img/相册.png" alt="">
+                        <samp>相册</samp>
+                    </a>
+                </li>
+    
+                <li class="other">
+                    <a href="./massage/massage.html">
+                        <img src="./img/地球.png" alt="">
+                        <samp>留言板</samp>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="introduction">
+            <div class="introduction-box">
+                <div class="profile-pic">
+                    <img src="./img/profile.jpg" alt="">
+                </div>
+
+                <div class="detail-box">
+                    <h1>察里津tsaritsyn</h1>
+                    <samp>广州丨暨南大学</samp>
+                    <p id="my-introduction">null</p>
+                    <hr color="black" width="15px" size="1px">
+                </div>
+
+                <div class="link-box1">
+                    <ul>
+                        <li class="li1">
+                            <div class="web-box1">
+                                <img src="./img/qq.png" alt="QQ" id=qq>
+                            </div>
+                        </li>
+
+                        <li class="li1">
+                            <div class="web-box1">
+                                <img src="./img/wechat.png" alt="Wechat" id=wechat>
+                            </div>
+                        </li>
+
+                        <li class="li1">
+                            <div class="web-box1">
+                                <img src="./img/telegram.png" alt="Telegram" id=telegram>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="link-box2">
+                    <ul>
+                        <li class="web-box2">
+                            <img src="./img/x.png" alt="X">
+                            <h2>X</h2>
+                            <a href="https://x.com">X.com</a>
+                            <button style="background-color: black;" id=x>Follow</button>
+                        </li>
+
+                        <li class="web-box2">
+                            <img src="./img/github.png" alt="GitHub">
+                            <h2>GitHub</h2>
+                            <a href="https://github.com">Github.com</a>
+                            <button style="background-color: black;" id=github>Follow</button>
+                        </li>
+
+                        <li class="web-box2">
+                            <img src="./img/bilibili.png" alt="BiliBili">
+                            <h2>BiliBili</h2>
+                            <a href="http://bilibili.com">bilibili.com</a>
+                            <button style="background-color: #FF6699;" id=bilibili>Follow</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
