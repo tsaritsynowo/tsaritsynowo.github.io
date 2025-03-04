@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    position: relative;
+}
+
+nav {
+    background-color: #A393C6;
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    clear: both;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    min-width: 630px;
+}
+
+nav .home {
+    float: left;
+    /* width: 20vw; */
+    padding-right: 4vw;
+    min-width: 130px;
+    max-width: 170px;
+    text-align: center;
+}
+
+nav img {
+    height: 20px;
+    filter: invert(100%);
+    float: left;
+}
+
+nav samp{
+    float: left;
+    font-size: 15px;
+    font-family: Microsoft YaHei;
+}
+
+nav .other {
+    float: left;
+    width: 16.5vw;
+    max-width: 150px;
+    text-align: center;
+}
+
+nav a,
+nav a:hover,
+nav a:visited,
+nav a:link,
+nav a:active {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
