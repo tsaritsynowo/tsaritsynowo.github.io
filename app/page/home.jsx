@@ -134,7 +134,7 @@ function MyIntroduction() {
         <>
         <div className="introduction">
             <div className="profile">
-                <img src="/public/profile.jpg" alt="profile" />
+                <img src="/profile.jpg" alt="profile" />
                 <div className="random-text">
                     <RandomSentence />
                 </div>
