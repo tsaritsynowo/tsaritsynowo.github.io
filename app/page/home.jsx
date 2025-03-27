@@ -1,4 +1,3 @@
-import "../CSS/index.css";
 import { Link } from "react-router";
 import randomSentence from "../../public/RandomSentence.json"
 import { createContext, useContext, useEffect, useState, useMemo, useRef, useCallback, use } from "react";
@@ -135,7 +134,7 @@ function MyIntroduction() {
         <>
         <div className="introduction">
             <div className="profile">
-                <img src="../../public/profile.jpg" alt="profile" />
+                <img src="/public/profile.jpg" alt="profile" />
                 <div className="random-text">
                     <RandomSentence />
                 </div>

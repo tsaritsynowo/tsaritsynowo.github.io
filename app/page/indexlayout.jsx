@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link, Outlet } from "react-router";
-import "../CSS/index.css";
 
 function Loginbtm() {
     const [open, setOpen] = useState(false);

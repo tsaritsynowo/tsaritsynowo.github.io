@@ -1,5 +1,3 @@
-import "../../CSS/project.css"
-
 function SelectCard() {
   return (
     <div className="SelectCard">
