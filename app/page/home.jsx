@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import randomSentence from "../../public/RandomSentence.json"
+import randomSentence from "/public/RandomSentence.json"
+import profile from "/public/profile.jpg"
 import { createContext, useContext, useEffect, useState, useMemo, useRef, useCallback, use } from "react";
 
 const randomSentencelist = createContext(randomSentence);
@@ -134,7 +135,7 @@ function MyIntroduction() {
         <>
         <div className="introduction">
             <div className="profile">
-                <img src="/profile.jpg" alt="profile" />
+                <img src={profile} alt="profile" />
                 <div className="random-text">
                     <RandomSentence />
                 </div>
