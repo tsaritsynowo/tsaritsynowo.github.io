@@ -5,12 +5,13 @@ import { createContext, useContext, useEffect, useState, useMemo, useRef, useCal
 
 const randomSentencelist = createContext(randomSentence);
 
-function Loginbtm() {
+function Loginbtm({login, setLogin}) {
     const [open, setOpen] = useState(false);
     const form = useRef(null);
 
     const submit = useCallback(() => {
         const key = form.current.elements.key.value;
+        setLogin("logining");
         fetch("http://localhost:8080",
             {
                 method: "POST",
@@ -26,12 +27,15 @@ function Loginbtm() {
         .then(data => {
             if (data) {
                 alert("登录成功");
-                setOpen(false);
+                setLogin("login");
             } else {
-                alert("登录失败");
+                alert("key错误");
+                setLogin("unlogin");
             }
         })
        .catch(error => {
+            alert("连接服务器失败");
+            setLogin("unlogin");
             console.log(error);
         });
     }, []);
@@ -44,6 +48,7 @@ function Loginbtm() {
         }
         }, [setOpen, open])
 
+    if (login === "unlogin") {
     return (
         <div className="loginbtm" onClick={handleClick} id={open? "open-login" : "close-login"}>
             <p>管理员登录</p>
@@ -56,7 +61,21 @@ function Loginbtm() {
             </form>
         </div>
         );
+    } else if (login === "logining") {
+        return (
+            <div className="loginbtm" onClick={handleClick} id="logining">
+                <p>登录中...</p>
+            </div>
+            );
+    } else {
+        return (
+            <div className="loginbtm" onClick={handleClick} id={open? "open-login" : "close-login"}>
+                <p>欢迎</p>
+            </div>
+            );
+    }
 }
+
 
 function Nav() {
     return (
@@ -166,10 +185,12 @@ function MyIntroduction() {
 }
     
 export default function Home() {
+    const [login, setLogin] = useState("unlogin");
+
     return (
       <>
        <Nav />
-       <Loginbtm />
+       <Loginbtm login={login} setLogin={setLogin} />
         <div className="container">
           <MyIntroduction />
        </div>
