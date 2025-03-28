@@ -9,11 +9,11 @@
 }
 
 .mouse {
-    position: absolute;
+    position: fixed;
     animation: mouse 2s ease-in-out forwards;
 }
 
-.container>.fa {
+.container>div>.fa {
     font-size: 30px;
 }
 
@@ -137,6 +137,7 @@ nav {
 
 nav ul {
     display: flex;
+    list-style-type: none;
 }
 
 nav li {
@@ -178,10 +179,13 @@ nav li:hover::after,nav #active::after {
 /* home页面introduction样式 */
 
 .introduction {
+    position: relative;
     border: 3.5px solid #000000;
+    background-color: #ffffff;
     border-radius: 30px;
     overflow: hidden;
     animation: introduction-animation 2s ease-in-out forwards;
+    z-index: 2;
 }
 
 @keyframes introduction-animation {
@@ -405,4 +409,61 @@ nav li:hover::after,nav #active::after {
     display: inline-block;
     color: white;
     width: 90px;
+}
+
+#introduction-close {
+    position: relative;
+    animation: IntroductionCloseAnimation 0.5s ease-in-out forwards;
+}
+
+
+@keyframes IntroductionCloseAnimation {
+    0% {
+        transform: translateY(0px) rotateX(0deg);
+        filter: opacity(100%);
+    }
+    100% {
+        transform: translateY(-70px) rotateX(-60deg);
+        filter: opacity(0%);
+    }
+}
+
+/* GameBtm */
+.container>div {
+    position: relative;
+}
+
+.OpenGameBtm {
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    left: 500px;
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    animation: 
+        OpenGameBtmAnimation 0.5s ease-in-out forwards running;
+}
+
+.OpenGameBtm:hover {
+    transform: translateY(-20px);
+}
+
+.OpenGameBtm i {
+    position: relative;
+    left: 110px;
+}
+
+@keyframes OpenGameBtmAnimation {
+    0% {
+        top: 0px;
+}
+    100% {
+        top: -15px;
+    }
+}
+
+#close-game-btm {
+    display: none;
 }
