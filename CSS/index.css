@@ -145,14 +145,14 @@
     display: flex;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     min-width: 1050px;
 }
 
 nav {
   margin: 25px;
   padding: 10px;
-  border: 0.2em solid #000000;
+  border: 3.5px solid #000000;
   background-color: white;
   border-radius: 2em;
   clear: both;
@@ -177,7 +177,7 @@ nav .fa {
     font-size: 23px;
 }
 
-nav li::after {
+nav .NavBtm::after {
     content: "";
     display: block;
     width: 0%;
@@ -187,7 +187,7 @@ nav li::after {
     transition: all 0.1s ease-in-out;
 }
 
-nav li:hover::after,nav #active::after {
+nav .NavBtm:hover::after,nav #active::after {
     content: "";
     display: block;
     width: 100%;
