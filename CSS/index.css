@@ -614,7 +614,7 @@ nav .NavBtm:hover::after,nav #active::after {
     
     .introduction-container .introduction-text ul {
         margin-top: 15px;
-        list-style: circle;
+        list-style: none;
     }
     
     .introduction-container .introduction-text li {
