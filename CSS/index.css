@@ -327,13 +327,14 @@ nav .NavBtm:hover::after,nav #active::after {
     margin-bottom: 15px;
 }
 
-.introduction-container .introduction-text ul {
+.introduction-container .introduction-text div {
     margin-top: 15px;
-    list-style: circle;
 }
 
-.introduction-container .introduction-text li {
+.introduction-container .introduction-text p {
+    margin-top: 0px;
     margin-bottom: 5px;
+    text-align: -webkit-match-parent;
 }
 
 .introduction-button .picture {
@@ -588,7 +589,7 @@ nav .NavBtm:hover::after,nav #active::after {
     
     .introduction-container .introduction-title {
         display: flex;
-        width: min(100%,400px);
+        width: min(100%,370px);
     }
     
     .introduction-container .introduction-title h1 {
@@ -612,18 +613,18 @@ nav .NavBtm:hover::after,nav #active::after {
         margin-block: 30px;
     }
     
-    .introduction-container .introduction-text ul {
+    .introduction-container .introduction-text div {
+        margin-top: 0px;
         margin-top: 15px;
-        list-style: none;
     }
     
-    .introduction-container .introduction-text li {
+    .introduction-container .introduction-text p {
         margin-bottom: 10px;
         font-size: 1em;
     }
 
     .introduction-button {
-        max-width:284px ;
+        max-width:300px;
     }
 
     .introduction-button .connect {
@@ -634,7 +635,7 @@ nav .NavBtm:hover::after,nav #active::after {
     }
 
     .introduction-button span {
-        width: min(calc(50% - 27px),115px);
+        width: calc(50% - 27px);
         aspect-ratio: 1/1;
         margin: 10px;
         padding: 0px;
@@ -702,6 +703,7 @@ nav .NavBtm:hover::after,nav #active::after {
         font-size: 0.7em;
         font-weight: 700;
         margin-inline: 15%;
+        margin-top: 2%;
         padding-block: 5px;
         width: 70%;
         background-color: #000000;
