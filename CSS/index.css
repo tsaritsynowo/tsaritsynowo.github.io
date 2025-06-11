@@ -542,9 +542,8 @@ nav .NavBtm:hover::after,nav #active::after {
         border: 0px;
         border-radius: 0px;
         animation: none;
-        margin: 15vw;
+        margin: 12vw;
         margin-top: 70px;
-        justify-items: center;
     }
 
     .profile {
@@ -568,7 +567,7 @@ nav .NavBtm:hover::after,nav #active::after {
     .profile .random-text p {
         padding-left: 20px;
         margin: 0px;
-        font-size: 1em;
+        font-size: 1.2em;
         font-weight: 700;
     }
     
@@ -582,12 +581,14 @@ nav .NavBtm:hover::after,nav #active::after {
     }
     
     .introduction-container {
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .introduction-container .introduction-title {
         display: flex;
-        align-items: end;
+        width: min(100%,400px);
     }
     
     .introduction-container .introduction-title h1 {
@@ -598,7 +599,7 @@ nav .NavBtm:hover::after,nav #active::after {
     }
     
     .introduction-container .introduction-title p {
-        font-size: 1.1em;
+        font-size: 1em;
         font-weight: 500;
         margin: 0px;
         margin-top: 10px;
@@ -617,8 +618,8 @@ nav .NavBtm:hover::after,nav #active::after {
     }
     
     .introduction-container .introduction-text li {
-        margin-bottom: 5px;
-        font-size: 0.5em;
+        margin-bottom: 10px;
+        font-size: 1em;
     }
 
     .introduction-button {
