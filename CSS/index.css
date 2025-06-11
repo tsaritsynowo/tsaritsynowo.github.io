@@ -27,7 +27,7 @@
         left: calc(50vw + 295px);
         }
     100% {
-        top: calc(50vh + 220px);
+        top: calc(50vh + 200px);
         left: calc(50vw + 330px);
     }
 }
@@ -194,6 +194,39 @@ nav .NavBtm:hover::after,nav #active::after {
     height: 0.15em;
     background-color: #000000;
     border-radius: 4px;
+}
+
+.blog-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px;
+    padding-inline: 30px;
+    margin-top: 17px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: 3px solid #000000;
+    border-radius: 30px;
+    animation: blog-button-animation 2.5s ease-in-out forwards;
+    transition: color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.blog-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+}
+
+@keyframes blog-button-animation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* home页面introduction样式 */
@@ -431,6 +464,10 @@ nav .NavBtm:hover::after,nav #active::after {
     width: 90px;
 }
 
+.introduction-button .followBtm {
+    display: none;
+}
+
 #introduction-close {
     position: relative;
     animation: IntroductionCloseAnimation 0.5s ease-in-out forwards;
@@ -486,4 +523,201 @@ nav .NavBtm:hover::after,nav #active::after {
 
 #close-game-btm {
     display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+
+    .blog-button {
+        display: none;
+    }
+
+    .container {
+        justify-content: start;
+    }
+
+    .introduction {
+        border: 0px;
+        border-radius: 0px;
+        animation: none;
+        margin: 15vw;
+        margin-top: 70px;
+        justify-items: center;
+    }
+
+    .profile {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    
+    .profile img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        padding-right: 20px;
+    }
+    
+    .profile .random-text {
+        display: flex;
+        align-items: center;
+    }
+    
+    .profile .random-text p {
+        padding-left: 20px;
+        margin: 0px;
+        font-size: 1em;
+        font-weight: 700;
+    }
+    
+    .profile .random-text::before {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 80%;
+        background-color: #000000;
+        border-radius: 2px;
+    }
+    
+    .introduction-container {
+        
+    }
+    
+    .introduction-container .introduction-title {
+        display: flex;
+        align-items: end;
+    }
+    
+    .introduction-container .introduction-title h1 {
+        font-size: 2em;
+        font-weight: 700;
+        margin: 0px;
+        margin-top: 0px;
+    }
+    
+    .introduction-container .introduction-title p {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin: 0px;
+        margin-top: 10px;
+        padding-inline: 10px;
+        margin-bottom: 3px;
+        color: grey;
+    }
+    
+    .introduction-container .introduction-text {
+        margin-block: 30px;
+    }
+    
+    .introduction-container .introduction-text ul {
+        margin-top: 15px;
+        list-style: circle;
+    }
+    
+    .introduction-container .introduction-text li {
+        margin-bottom: 5px;
+        font-size: 0.5em;
+    }
+
+    .introduction-button {
+        max-width:284px ;
+    }
+
+    .introduction-button .connect {
+        display: block;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .introduction-button span {
+        width: min(calc(50% - 27px),115px);
+        aspect-ratio: 1/1;
+        margin: 10px;
+        padding: 0px;
+        border: 3px solid #000000;
+        border-radius: 25%;
+    }
+
+    .introduction-button span:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+
+    .introduction-button .connect i {
+        margin: 15%;
+        font-size: 1.5em;
+    }
+
+    .introduction-button #QQ::after,.introduction-button #QQ:hover::after {
+        content: "QQ";
+        display: block;
+        margin-top: 8px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+    
+    .introduction-button #wechat::after,.introduction-button #wechat:hover::after {
+        content: "WeChat";
+        display: block;
+        margin-top: 8px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+    
+    .introduction-button #telegram::after,.introduction-button #telegram:hover::after {
+        content: "Telegram";
+        display: block;
+        margin-top: 8px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+    
+    .introduction-button #github::after,.introduction-button #github:hover::after {
+        content: "Github";
+        display: block;
+        margin-top: 8px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+    
+    .introduction-button #twitter::after,.introduction-button #twitter:hover::after {
+        content: "Twitter";
+        display: block;
+        margin-top: 8px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+
+    .introduction-button .followBtm {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 700;
+        margin-inline: 15%;
+        padding-block: 5px;
+        width: 70%;
+        background-color: #000000;
+        border-radius: 20px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .introduction-button .picture {
+        display: none;
+    }
+
+    .OpenGameBtm {
+        display: none;
+    }
+
+    i.mouse {
+        display: none;
+    }
 }
